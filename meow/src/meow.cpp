@@ -6,11 +6,17 @@
 
 void meow::get_meow_count() {
     unsigned int meows;
-    std::cout << "How many meows would you like?: ";
+    std::cout << "How many meows would you like? (0 for continuous): ";
     std::cin >> meows;
 
-    for (unsigned int i = 0; i < meows; i++) {
-        print_meow(i);
+    switch(meows) {
+        case 0:
+        for(int i = 0;; i++) print_meow(i);
+        break;
+
+        default:
+        for (int i = 0; i < meows; i++) print_meow(i);
+        break;
     }
 }
 
