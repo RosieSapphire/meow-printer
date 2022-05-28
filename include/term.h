@@ -1,9 +1,7 @@
 #ifndef TERM_H
 #define TERM_H
 
-#include <cstdio>
-#include <vector>
-#include "vec2.h"
+#include <stdio.h>
 
 #define TERM_NORMAL  "\x1B[0m"
 #define TERM_RED     "\x1B[1;31m"
@@ -24,17 +22,5 @@
 #define TERM_BG_WHITE   "\x1B[47m"
 
 #define TERM_MOVE_CURSOR(VEC) printf("\033[%d;%dH", VEC.y, VEC.x)
-
-namespace term {
-	enum color : unsigned char {
-		NORMAL,
-		RED,
-		YELLOW,
-		GREEN,
-		BLUE
-	};
-
-	vec2<int> get_size();
-};
 
 #endif

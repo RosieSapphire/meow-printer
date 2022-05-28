@@ -1,1 +1,5 @@
-build/
+.cache/
+obj/
+compile_commands.json
+meow-printer-d
+meow-printer
