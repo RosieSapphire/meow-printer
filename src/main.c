@@ -21,6 +21,13 @@ static const char *colors[5] = {
 	TERM_MAGENTA,
 };
 
+/**
+ * print_meows - Print Meows
+ * @i: Current Index/Frame
+ * @col: Color of the Text
+ *
+ * Description: Draws the Meow at the right index and octave
+ */
 void print_meows(const uint32 i, const char *col)
 {
 	uint32 j;
@@ -39,6 +46,11 @@ void print_meows(const uint32 i, const char *col)
 	usleep(15000);
 }
 
+/**
+ * _print_meows_infinite - Print Infinite Meows
+ *
+ * Description: Runs the print_meows function infinitely
+ */
 static void _print_meows_infinite(void)
 {
 	uint32 i = 0;
@@ -52,6 +64,11 @@ static void _print_meows_infinite(void)
 	}
 }
 
+/**
+ * _print_meows_finite - Print Finite Meows
+ *
+ * Description: Runs the print_meows function a specified number of times
+ */
 static void _print_meows_finite(void)
 {
 	uint32 i = 0;
@@ -64,6 +81,12 @@ static void _print_meows_finite(void)
 	}
 }
 
+/**
+ * main - Main Function
+ *
+ * Description: Main Function
+ * Return: 0 = Success
+ */
 int main(void)
 {
 	printf("How many meows would you like? (0 for continuous): ");
